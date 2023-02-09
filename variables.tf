@@ -22,7 +22,7 @@ variable "shared_category_tag" {
   type = string
   
   validation {
-    condition = contain(var.shared_category_allowed_values, var.shared_category_tag)
+    condition = contain(var.shared_category_allowed_values, var.shared_category_tag) == false
     error_message = "Invalid value for Shared Category Tag"
   }
 }
