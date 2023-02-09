@@ -4,7 +4,7 @@ variable "resource_name" {
   type        = string
   
   validation {
-    condition = trim() == ""
+    condition = trim(var.resource_name) == ""
     error_message = "Resource's name required"
   }
 }
